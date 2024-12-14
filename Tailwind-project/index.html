@@ -5,10 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- add Tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- add google font ( jost ) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- customize css file add -->
+  <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-  <h1>hello Tailwind</h1>
+  <!-- Hero Section -->
+  <header class="w-full h-[650px] bg-cover bg-center flex items-center justify-center text-center"
+    style="background-image: url('https://i.ibb.co.com/7K3L0th/pexels-olly-3769747.jpg');">
+    <div class="bg-black bg-opacity-50 p-8 rounded-lg">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+        Welcome to Your Dream Destination
+      </h1>
+      <p class="text-lg md:text-xl text-gray-200 mb-6">
+        Discover the best adventures and unforgettable experiences.
+      </p>
+      <a href="#explore"
+        class="bg-blue-500 text-white px-4 py-1 lg:px-6 py-3 rounded-lg text-sm lg:text-lg font-medium hover:bg-blue-600 transition">
+        Explore Now
+      </a>
+    </div>
+  </header>
 </body>
 
 </html>
