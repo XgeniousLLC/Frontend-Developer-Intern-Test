@@ -32,3 +32,4 @@ function typeCharacter() {
 
 
 typeCharacter();
+
