@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/tailwind/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.48.0/dist/full.css" rel="stylesheet" />
+    <title>Safe Cart</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                daisyui: {
+                    themes: ["light"],
+                },
+                letterSpacing: {
+                    "3p": "3%",
+                },
+                extend: {
+                    colors: {
+                        baseBg: "#00192B",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="container bg-baseBg py-5 px-4 mx-auto flex flex-col gap-4 justify-between text-white">
+            <div class=" flex flex-col gap-4">
+                <div class="flex flex-row items-center gap-3">
+                    <img src="/assets/images/icons/telephone.svg" alt="">
+                    <p>(678) 999-9635</p>
+                </div>
+                <div class="flex flex-row items-center gap-3">
+                    <img src="/assets/images/icons/map-pin.svg" alt="">
+                    <p>96872 Boulevard Rd, CA</p>
+                </div>
+            </div>
+            <div class="">
+                <div class="flex flex-row items-center gap-3">
+                    <img src="/assets/images/icons/delevary-van.svg" alt="">
+                    <p>Track an Order</p>
+                </div>
+            </div>
+        </div>
+        <div class="container py-5 px-4 mx-auto flex flex-row justify-between">
+            <img src="/assets/images/icons/logo.svg" alt="">
+            <div class=" ">
+                <img class="p-3 border-[#E0ECE9] border-2 rounded-full hidden" src="/assets/images/icons/heart.svg"
+                    alt="Wishlist">
+                <img class="p-3 border-[#E0ECE9] border-2 rounded-full" src="/assets/images/icons/user.svg" alt="User">
+                <img class="p-3 border-[#E0ECE9] border-2 rounded-full hidden"
+                    src="/assets/images/icons/shopping-cart.svg" alt="Cart">
+            </div>
+        </div>
+    </nav>
+    <main class="container py-5 px-4 mx-auto">
+        <!-- banner section -->
+        <section class="flex flex-col gap-5 mb-4">
+            <div class="flex justify-between items-center banner-1 rounded">
+                <div class="ms-9 my-9">
+                    <h3 class="uppercase mb-2">Novembers<br>gadget madness</h3>
+                    <h2 class="uppercase font-bold text-2xl mb-7">20% off</h2>
+                    <button class="capitalize rounded-full bg-[#F6F54D] px-8 py-3 font-medium">get offer</button>
+                </div>
+                <img class="h-52" src="/assets/images/banner/offer-1.png" alt="">
+            </div>
+            <div class="relative">
+                <img src="/assets/images/banner/Group-2.png" alt="">
+                <div class="absolute top-0 py-10 ps-10 w-1/2 h-full flex flex-col justify-between">
+                    <div class="">
+                        <h3 class="uppercase mb-2 text-xs font-medium">winter 2024 offer</h3>
+                        <h2 class="capitalize font-bold text-xl mb-1">Grab the best fashion deals in this winter</h2>
+                        <img class="w-7" src="/assets/images/banner/offer-2-pagination.svg" alt="">
+                    </div>
+                    <button class="capitalize rounded-full bg-[#0C1230] w-28 py-2 font-medium text-white">get
+                        deals</button>
+                </div>
+                <div
+                    class="absolute bottom-1 right-0 md:transform md:-translate-x-1/2 md:-translate-y-1/2 rounded-full bg-white px-4 py-2 flex flex-row items-center gap-1">
+                    <img class="aspect-square w-3 h-3" src="/assets/images/banner/cotton.png" alt="">
+                    <span class="uppercase font-medium text-black ">95% cotton made</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        const buttons = document.querySelectorAll('.button');
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                alert('Product added to the cart');
+            });
+        });
+    </script>
+</body>
+
+</html>
