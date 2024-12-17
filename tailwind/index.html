@@ -58,7 +58,7 @@
             </div>
         </div>
     </nav>
-    <main class="container py-5 px-4 mx-auto">
+    <main class="container py-5 px-4 mx-auto mb-16">
         <!-- banner section -->
         <section class="flex flex-col gap-5 mb-4">
             <div class="flex justify-between items-center banner-1 rounded">
@@ -106,7 +106,8 @@
                 </span>
             </div>
             <hr class="border-b-[1px] border-[#D0D5DD] w-full mt-6 mb-10">
-            <div class="grid gap-6 justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 ">
+            <div
+                class="grid gap-6 justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 ">
                 <div class="relative group w-56 hover:shadow-md hover:shadow-green-100 transition-shadow">
                     <img src="/assets/images/products/ugly-sweater.png" alt="sweater">
                     <div class="text-[#FFC436] w-20 mt-4 mb-2">
@@ -326,8 +327,96 @@
             </div>
         </section>
     </main>
-    <footer>
+    <!-- reputation section -->
+    <section class="reputation flex flex-col items-center gap-10 pt-10 px-4">
+        <div class="flex flex-col justify-center items-center">
+            <img class="w-10 mb-4" src="/assets/images/icons/vendor.svg" alt="">
+            <h2 class="mb-1">1,900+ Vendors</h2>
+            <p>1,900 Vendors are working with us around the US</p>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <img class="w-10" src="/assets/images/icons/customer.svg" alt="">
+            <h2>9,102+ Customers</h2>
+            <p>9,102+ Customers are making retained purchases every now & then</p>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <img class="w-10" src="/assets/images/icons/trophy.svg" alt="">
+            <h2>12 Awards</h2>
+            <p>We won 12 awards for excellency in customer service</p>
+        </div>
+    </section>
+    <footer class="bg-baseBg px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-6 md:py-10 lg:py-14 xl:py-20 2xl:py-24 ">
+        <div class="container flex flex-col lg:flex-row justify-between">
+            <div class="flex flex-col gap-8">
+                <div class="flex flex-row gap-3">
+                    <span class="rounded-full border-[1px] w-12 h-12 bg-[#142B3C] flex justify-center items-center">
+                        <img class="" src="/assets/images/icons/map-pin.svg" alt="">
+                    </span>
+                    <div>
+                        <p class="text-xs text-[#B2BABF]">Location</p>
+                        <h4 class="text-lg text-white font-bold">New York, NY, USA</h4>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <span class="rounded-full border-[1px] w-12 h-12 bg-[#142B3C] flex justify-center items-center">
+                        <img class="" src="/assets/images/icons/telephone.svg" alt="">
+                    </span>
+                    <div>
+                        <p class="text-xs text-[#B2BABF]">Have a question?</p>
+                        <h4 class="text-lg text-white font-bold">324-094-3233</h4>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <span class="rounded-full border-[1px] w-12 h-12 bg-[#142B3C] flex justify-center items-center">
+                        <img class="" src="/assets/images/icons/mail.svg" alt="">
+                    </span>
+                    <div>
+                        <p class="text-xs text-[#B2BABF]">Contact us at</p>
+                        <h4 class="text-lg text-white font-bold">safecart@mail.com</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 text-[#B2BABF] grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 lg:gap-10 xl:gap-14 md:justify-between">
+                <div class="flex flex-col gap-5 items-center">
+                    <h4 class="text-white font-bold">Shop</h4>
+                    <a href="">Shop</a>
+                    <a href="">My Orders</a>
+                    <a href="">My Account</a>
+                    <a href="">Track My Order</a>
+                    <a href="">Return Policy</a>
+                    <a href="">Refund Policy</a>
+                </div>
+                <div class="flex flex-col gap-5 items-center">
+                    <h4 class="text-white font-bold">Categories</h4>
+                    <a href="">Gadget Items</a>
+                    <a href="">Fashion & Wear</a>
+                    <a href="">Home Appliances</a>
+                    <a href="">Pet Foods</a>
+                    <a href="">Surveillance Cameras</a>
+                    <a href="">Monitors</a>
+                    <a href="">Smart Watches</a>
+                </div>
+                <div class="flex flex-col gap-5 items-center col-span-2 md:col-span-1">
+                    <h4 class="text-white font-bold">About</h4>
+                    <a href="">About us</a>
+                    <a href="">FAQ</a>
+                    <a href="">Help</a>
+                    <a href="">Contact us</a>
+                    <a href="">Privacy policy</a>
+                    <a href="">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 items-center">
+                <h4 class="text-white font-bold">Newsletter</h4>
+                <p>Be the first one to know about discounts, offers and events. Unsubscribe whenever you like.</p>
+                <label class="rounded-full input input-bordered border-[#667580] flex justify-between items-center gap-2 pe-1 bg-[#334755]">
+                    <img class="" src="/assets/images/icons/mail.svg" alt="">
+                    <input type="text" class="grow bg-[#334755]" placeholder="Enter your email" />
+                    <button class=" bg-white text-black px-5 py-2 rounded-full">Submit</button>
+                </label>
 
+            </div>
+        </div>
     </footer>
     <script>
         const buttons = document.querySelectorAll('.button');

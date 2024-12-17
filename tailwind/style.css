@@ -5,6 +5,6 @@ nav{
     background: linear-gradient(135.69deg, rgb(98, 205, 255) 27.546%,rgb(0, 128, 194) 123.52%);;
 }
 
-footer{
-    box-shadow: 0px -2px 60px 0px #1d293914;
+.reputation{
+    box-shadow: -5px -2px 60px 0px #1d293914;
 }
