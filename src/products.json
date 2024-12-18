@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co.com/q50yCyN/Product-Image.png",
+    "productName": "Pink Premium Long Ugly Sweater - Winter Comfort ",
+    "priceOld": 79.99,
+    "priceNew": 59.99,
+    "totalSale": 120,
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co.com/z6JPy9T/Product-Image-1.png",
+    "productName": "Pink Premium Long Ugly Sweater - Winter Comfort ",
+    "priceOld": 49.99,
+    "priceNew": 39.99,
+    "totalSale": 250,  
+    "rating": 4.7
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co.com/5RY5K1T/Product-Image-6.png",
+    "productName": "Wireless-AC3100 Dual Band Gigabit Router RT-AC88U   ",
+    "priceOld": 35.99,
+    "priceNew": 29.99,
+    "totalSale": 300,
+    "rating": 4.3
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co.com/5TMH6Tp/Product-Image-2.png",
+    "productName": "Sonybeat Noise-Canceling BGM Headphone",
+    "priceOld": 129.99,
+    "priceNew": 99.99,
+    "totalSale": 85,
+    "rating": 4.6
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co.com/5hhJ576/Product-Image-3.png",
+    "productName": "SMUG. Premium T-shirt Fabric soft and comfortable",
+    "priceOld": 59.99,
+    "priceNew": 49.99,
+    "totalSale": 150,
+    "rating": 4.8
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co.com/rbHgsSB/Product-Image-4.png",
+    "productName": "Phillips Pro Blend 6 Powerful Blender & Meat Grinder",
+    "priceOld": 199.99,
+    "priceNew": 179.99,
+    "totalSale": 50,
+    "rating": 4.2
+  }
+]

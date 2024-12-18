@@ -1,11 +1,19 @@
-import Navbar1 from "../components/Navbar1";
-import Navbar2 from "../components/Navbar2";
+import products from "../products.json";
+import ProductCard from "../components/ProductCard";
 const Home = () => {
   return (
-    <div>
-      {/* nav bar 1 */}
-      <Navbar1 />
-      <Navbar2/>
+    <div className="container">
+      <div>
+        <h3>Popular Products</h3>
+        <hr />
+        <div className="row">
+          {products.map((product) => (
+            <div key={product.id} className="col-lg-2 col-md-4">
+              <ProductCard product={product} />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
