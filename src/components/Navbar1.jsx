@@ -8,7 +8,7 @@ const Navbar1 = () => {
   return (
     <div>
       <Navbar style={{ backgroundColor: "#00192A" }}>
-        <Container>
+        <Container className="d-flex flex-column flex-sm-row">
           <Navbar.Brand
             href="#home"
             className="text-light d-flex justify-content-center align-items-center  gap-2"
