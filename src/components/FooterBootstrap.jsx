@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Nav, NavLink, Row } from "react-bootstrap";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"; // Import social media icons
 
 const FooterBootstrap = () => {
   return (
@@ -31,15 +32,15 @@ const FooterBootstrap = () => {
             </Col>
             <Col md={4} className="mb-3">
               <h5>Follow Us</h5>
-              <Nav>
+              <Nav className="social-icons">
                 <NavLink href="https://facebook.com" className="text-light">
-                  Facebook
+                  <FaFacebook size={30} />
                 </NavLink>
                 <NavLink href="https://twitter.com" className="text-light">
-                  Twitter
+                  <FaTwitter size={30} />
                 </NavLink>
                 <NavLink href="https://instagram.com" className="text-light">
-                  Instagram
+                  <FaInstagram size={30} />
                 </NavLink>
               </Nav>
             </Col>
