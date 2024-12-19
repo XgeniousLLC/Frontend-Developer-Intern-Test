@@ -4,43 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind</title>
+
     <!-- font awesome icon -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#5333ED",
-              secondary: "#2CD4D9",
-              success: "#006044",
-              warning: "#ECF96E",
-              white: "#FFFFFF",
-            },
-          },
-        },
-      };
-    </script>
+
+    <!-- google font  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "DM Sans", sans-serif;
+      }
+      /* Hover effect for cards */
+      .card:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+      }
+    </style>
   </head>
   <body>
+    <!-- top header section start  -->
+    <div class="bg-[#00192b] text-white py-2">
+      <div class="container mx-auto px-4 md:px-10">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-2"
+        >
+          <div
+            class="flex flex-wrap items-center justify-center md:justify-start gap-6 text-base mb-2 md:mb-0"
+          >
+            <span class="flex items-center">
+              <i class="fas fa-phone-alt"></i>
+              <span class="ml-2">(678) 999-3985</span>
+            </span>
+            <span class="flex items-center">
+              <i class="fas fa-map-marker-alt"></i>
+              <span class="ml-2">96872 Boulevard Rd, CA</span>
+            </span>
+          </div>
+          <!-- Right Section -->
+          <div class="text-center md:text-right text-base">
+            <a href="#" class="text-white">
+              <i class="fas fa-truck"></i>
+              <span class="ml-2">Track an Order</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- top header section end  -->
+
     <!-- navbar section start -->
-    <nav class="bg-primary text-white fixed top-0 w-full z-50">
+    <nav class="text-[#006044] py-3">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <!-- Logo -->
           <div class="flex-shrink-0">
-            <a href="#" class="text-2xl font-bold">Tailwind</a>
+            <a href="#" class="text-2xl font-bold">
+              <img
+                src="assets/images/logo/logo.png"
+                alt="SafeCart Logo"
+                width="203"
+                height="56"
+                class="inline-block"
+              />
+            </a>
           </div>
           <!-- Menu Items -->
           <div class="hidden md:flex space-x-4">
-            <a href="#" class="hover:text-secondary">Home</a>
-            <a href="#" class="hover:text-secondary">Products</a>
-            <a href="#" class="hover:text-secondary">Contact</a>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Contact</a>
           </div>
           <!-- Mobile Menu Button -->
           <div class="md:hidden">
@@ -65,43 +106,121 @@
       </div>
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden md:hidden bg-primary">
-        <a href="#" class="block px-4 py-2 hover:bg-secondary">Home</a>
-        <a href="#" class="block px-4 py-2 hover:bg-secondary">Products</a>
-        <a href="#" class="block px-4 py-2 hover:bg-secondary">Contact</a>
+        <a href="#" class="block px-4 py-2">Home</a>
+        <a href="#" class="block px-4 py-2">Products</a>
+        <a href="#" class="block px-4 py-2">Contact</a>
       </div>
     </nav>
     <!-- navbar section end -->
 
     <!-- hero section start  -->
-    <section
-      class="relative bg-primary h-screen flex items-center justify-center"
-    >
-      <!-- Background Image -->
-      <div
-        class="absolute inset-0 bg-cover bg-center opacity-70"
-        style="background-image: url('assets/images/hero/gadget_slider1.jpg')"
-      ></div>
-
-      <!-- Content -->
-      <div class="relative text-center px-4 sm:px-6  lg:px-8">
-        <!-- Title -->
-        <h1
-          class="text-4xl sm:text-6xl  font-bold text-textPrimary leading-tight"
-        >
-          Welcome to <span class="text-secondary">Our Product Showcase</span>
-        </h1>
-        <!-- Subtitle -->
-        <p class="mt-4 text-lg sm:text-xl text-gray-200">
-          Discover the best products designed just for you.
-        </p>
-        <!-- Call-to-Action Button -->
-        <div class="mt-6">
-          <a
-            href="#products"
-            class="bg-secondary text-primary px-6 py-3 rounded-lg shadow-lg text-lg font-medium hover:bg-warning transition duration-300"
-          >
-            Explore Now
-          </a>
+    <section class="py-5 bg-[#f4f4f4]">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-10">
+        <div class="flex flex-wrap -mx-4">
+          <!-- First Column -->
+          <div class="w-full md:w-1/3 px-4 mb-4 md:mb-0">
+            <!-- First Card -->
+            <div
+              class="card rounded-lg overflow-hidden"
+              style="
+                background: linear-gradient(
+                  106.08deg,
+                  #62cdff 27.55%,
+                  #0080c2 123.52%
+                );
+              "
+            >
+              <div class="flex flex-wrap">
+                <div class="w-full md:w-7/12 p-8">
+                  <h5
+                    class="text-white text-sm font-medium uppercase leading-6"
+                  >
+                    Novembers Gadget Madness
+                  </h5>
+                  <h5 class="text-3xl font-bold uppercase text-[#173459]">
+                    20% OFF
+                  </h5>
+                  <a
+                    href="#"
+                    class="btn mt-auto rounded-full bg-[#f6f54d] text-[#0c1230] px-4 py-2 inline-block"
+                  >
+                    Get Offer
+                  </a>
+                </div>
+                <div class="w-full md:w-5/12">
+                  <img
+                    src="assets/images/hero/image3.png"
+                    class="img-fluid p-4"
+                    alt="Card image"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Second Card -->
+            <div class="bg-[#f4f300] card shadow-lg rounded-lg mt-4 p-8">
+              <div class="text-center">
+                <h5 class="uppercase font-medium text-lg text-[#101828]">
+                  Cyber Monday Special
+                </h5>
+                <h5 class="text-3xl font-bold uppercase text-[#00142e]">
+                  HOME APPLIANCES
+                </h5>
+              </div>
+              <img
+                src="assets/images/hero/image2.png"
+                class="img-fluid p-4"
+                alt="Card image"
+              />
+            </div>
+          </div>
+          <!-- Second Column -->
+          <div class="w-full md:w-2/3 px-4">
+            <div
+              class="card rounded-lg p-3"
+              style="
+                background: linear-gradient(
+                  293.77deg,
+                  #62cdff 0%,
+                  rgba(98, 205, 255, 0.4) 332.62%
+                );
+              "
+            >
+              <div class="flex flex-wrap">
+                <div class="w-full md:w-7/12 p-4">
+                  <h5 class="text-lg uppercase text-[#1d2939]">
+                    WINTER 2024 Offer
+                  </h5>
+                  <h5 class="text-3xl font-bold text-[#173459]">
+                    Grab the best <br />
+                    fashion deals in <br />
+                    this winter
+                  </h5>
+                </div>
+                <div
+                  class="w-full md:w-5/12 flex justify-center items-center relative"
+                >
+                  <img
+                    src="assets/images/hero/image1.png"
+                    class="img-fluid"
+                    alt="Card image"
+                  />
+                  <button
+                    class="btn rounded-full bg-[#ffffff] text-[#1d2939] px-4 py-2 absolute top-1/2 transform -translate-y-1/2"
+                  >
+                    95% COTTON MADE
+                  </button>
+                </div>
+              </div>
+              <div class="flex justify-start px-4 mb-5">
+                <a
+                  href="#"
+                  class="btn bg-[#0c1230] text-[#ffffff] px-5 py-2 rounded-full"
+                >
+                  Get Deals
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -109,192 +228,597 @@
     <!-- hero section end  -->
 
     <!-- product section start  -->
-    <section id="products" class="py-12 bg-gray-100">
-      <div class="container mx-auto px-4">
-        <!-- Title -->
-        <h2 class="text-3xl font-bold text-primary text-center mb-8">
-          Our Products
-        </h2>
-        <!-- Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Product Card -->
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transform transition hover:scale-105"
-          >
-            <img
-              src="assets/images/product1.png"
-              alt="Product 1"
-              class="w-full h-72"
-            />
-            <div class="p-6">
-              <h3 class="text-lg font-semibold text-gray-800">
-                Pink Premium Long Ugly Sweater - Winter Comfort
-              </h3>
-              <p class="text-sm mt-1 font-bold">
-                <span class="text-success"> $49.99</span>
-                <span class="line-through"> $69.99</span>
+    <section class="py-5 bg-[#f4f4f4]">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-10">
+        <div class="flex items-center mb-3">
+          <div class="w-1/2">
+            <h3 class="text-4xl font-bold text-[#1d2939]">Popular Products</h3>
+          </div>
+          <div class="w-1/2 text-right">
+            <a
+              href="#"
+              class="text-2xl font-semibold text-[#006044] no-underline"
+            >
+              View All
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+        <hr class="my-4 border-gray-300" />
+
+        <div class="flex flex-wrap">
+          <!-- Product Card  -->
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product1.png"
+                alt="Product Image"
+                class="w-full"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product2.png"
+                alt="Product Image"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product3.png"
+                alt="Product Image"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product4.png"
+                alt="Product Image"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product5.png"
+                alt="Product Image"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product6.png"
+                alt="Product Image"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product7.png"
+                alt="Product Image"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product8.png"
+                alt="Product Image"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product9.png"
+                alt="Product Image"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product10.png"
+                alt="Product Image"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product11.png"
+                alt="Product Image"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/6 mb-4 p-4 card">
+            <div class="shadow-sm border-0 h-full bg-white rounded-lg">
+              <img
+                src="assets/images/product12.png"
+                alt="Product Image"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-5">
+                <!-- Rating -->
+                <div class="flex items-center mb-2">
+                  <div class="px-2 py-1 bg-[#fff5df] rounded">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2 text-[#ffc436]">4.5 (95)</span>
+                  </div>
+                </div>
+                <!-- Product Name -->
+                <h5 class="text-base">
+                  Pink Premium Long Ugly Sweater - Winter Comfort
+                </h5>
+                <!-- Price Section -->
+                <p class="text-lg">
+                  <span class="text-green-600 font-bold ml-2">$40</span>
+                  <span class="text-gray-500 line-through">$50</span>
+                </p>
+                <!-- Buy Now Button -->
+                <a
+                  href="#"
+                  class="bg-green-600 text-white text-sm rounded-full px-4 py-2 inline-flex items-center hover:bg-[#0056b3] transition duration-300"
+                  onclick="alert('Product added to cart!')"
+                >
+                  Buy Now <i class="fas fa-shopping-cart ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- product section end  -->
+
+    <!-- acchivement section start  -->
+    <section class="py-5">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-10">
+        <div class="flex flex-wrap text-center">
+          <!-- Vendors Column -->
+          <div class="w-full md:w-1/3 mb-4">
+            <div class="flex flex-col items-center">
+              <i
+                class="fas fa-store p-3 text-2xl rounded-full mt-3 mb-3 border-2 text-[#fd8d14] border-[#fd8d14] bg-[#fff5df]"
+              ></i>
+              <h5 class="font-bold">1,900+ Vendors</h5>
+              <p class="text-gray-500">
+                1,900 Vendors are working with us around the US
               </p>
-              <button
-                class="bg-primary text-white mt-4 w-full py-2 rounded-lg hover:bg-secondary transition duration-300"
-                onclick="alert('Product added to cart!')"
-              >
-                Buy Now
-              </button>
             </div>
           </div>
 
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transform transition hover:scale-105"
-          >
-            <img
-              src="assets/images/product2.png"
-              alt="Product 2"
-              class="w-full h-72"
-            />
-            <div class="p-6">
-              <h3 class="text-lg font-semibold text-gray-800">
-                Pink Premium Long Ugly Sweater - Winter Comfort
-              </h3>
-              <p class="text-sm mt-1 font-bold">
-                <span class="text-success"> $29.99</span>
-                <span class="line-through"> $59.99</span>
+          <!-- Customer Column -->
+          <div class="w-full md:w-1/3 mb-4">
+            <div class="flex flex-col items-center">
+              <i
+                class="fas fa-users p-3 text-2xl rounded-full mt-3 mb-3 border-2 text-[#525fe1] border-[#525fe1] bg-[#eeeffc]"
+              ></i>
+              <h5 class="font-bold">9,102+ Customers</h5>
+              <p class="text-gray-500">
+                9,102+ Customers are making retained purchases every now & then
               </p>
-              <button
-                class="bg-primary text-white mt-4 w-full py-2 rounded-lg hover:bg-secondary transition duration-300"
-                onclick="alert('Product added to cart!')"
-              >
-                Buy Now
-              </button>
             </div>
           </div>
 
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transform transition hover:scale-105"
-          >
-            <img
-              src="assets/images/product3.png"
-              alt="Product 3"
-              class="w-full h-72"
-            />
-            <div class="p-6">
-              <h3 class="text-lg font-semibold text-gray-800">
-                Wireless-AC3100 Dual Band Gigabit Router RT-AC88U
-              </h3>
-              <p class="text-sm mt-1 font-bold">
-                <span class="text-success"> $79.99</span>
-                <span class="line-through"> $89.99</span>
+          <!-- Award Column -->
+          <div class="w-full md:w-1/3 mb-4">
+            <div class="flex flex-col items-center">
+              <i
+                class="fas fa-trophy p-3 text-2xl rounded-full mt-3 mb-3 border-2 text-[#006044] border-[#006044] bg-[#eeeffc]"
+              ></i>
+              <h5 class="font-bold">12 Awards</h5>
+              <p class="text-gray-500">
+                We won 12 awards for excellency in customer service
               </p>
-              <button
-                class="bg-primary text-white mt-4 w-full py-2 rounded-lg hover:bg-secondary transition duration-300"
-                onclick="alert('Product added to cart!')"
-              >
-                Buy Now
-              </button>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transform transition hover:scale-105"
-          >
-            <img
-              src="assets/images/product4.png"
-              alt="Product 3"
-              class="w-full h-72"
-            />
-            <div class="p-6">
-              <h3 class="text-lg font-semibold text-gray-800">
-               Sonybeat Noise-Canceling BGM Headphone
-              </h3>
-              <p class="text-sm mt-1 font-bold">
-                <span class="text-success"> $89.99</span>
-                <span class="line-through"> $99.99</span>
-              </p>
-              <button
-                class="bg-primary text-white mt-4 w-full py-2 rounded-lg hover:bg-secondary transition duration-300"
-                onclick="alert('Product added to cart!')"
-              >
-                Buy Now
-              </button>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transform transition hover:scale-105"
-          >
-            <img
-              src="assets/images/product5.png"
-              alt="Product 3"
-              class="w-full h-72"
-            />
-            <div class="p-6">
-              <h3 class="text-lg font-semibold text-gray-800">
-                SMUG. Premium T-shirt Fabric soft and comfortable
-              </h3>
-              <p class="text-sm mt-1 font-bold">
-                <span class="text-success"> $49.99</span>
-                <span class="line-through"> $69.99</span>
-              </p>
-              <button
-                class="bg-primary text-white mt-4 w-full py-2 rounded-lg hover:bg-secondary transition duration-300"
-                onclick="alert('Product added to cart!')"
-              >
-                Buy Now
-              </button>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transform transition hover:scale-105"
-          >
-            <img
-              src="assets/images/product6.png"
-              alt="Product 3"
-              class="w-full h-72"
-            />
-            <div class="p-6">
-              <h3 class="text-lg font-semibold text-gray-800">
-               Phillips Pro Blend 6 Powerful Blender & Meat Grinder
-              </h3>
-              <p class="text-sm mt-1 font-bold">
-                <span class="text-success"> $59.99</span>
-                <span class="line-through"> $69.99</span>
-              </p>
-              <button
-                class="bg-primary text-white mt-4 w-full py-2 rounded-lg hover:bg-secondary transition duration-300"
-                onclick="alert('Product added to cart!')"
-              >
-                Buy Now
-              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- acchivement section end  -->
+
     <!-- footer section start  -->
-    <footer class="bg-gray-800 text-white py-6">
-      <div
-        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
-      >
-        <!-- Social Media Icons -->
-        <!-- Footer Text -->
-        <p class="text-gray-500">
-          &copy; 2024 Design Al Amin. All rights reserved.
-        </p>
-        <div class="flex space-x-4 mb-4 md:mb-0">
-          <a href="#" target="_blank" class="text-gray-400 hover:text-blue-500">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" target="_blank" class="text-gray-400 hover:text-blue-400">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" target="_blank" class="text-gray-400 hover:text-pink-500">
-            <i class="fab fa-instagram"></i>
-          </a>
+    <footer class="bg-[#00192b] text-white py-8">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-10">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+          <!-- Contact Us Section -->
+          <div class="col-span-1 md:col-span-3 mb-4">
+            <h5 class="font-bold mb-3">Contact Us</h5>
+            <div class="text-sm mb-3 flex items-center">
+              <i
+                class="fas fa-map-marker-alt p-2 rounded-full border border-white bg-white/10 text-white mr-2"
+              ></i>
+              <span>123 Main Street</span>
+            </div>
+            <div class="text-sm mb-3 flex items-center">
+              <i
+                class="fas fa-phone-alt p-2 rounded-full border border-white bg-white/10 text-white mr-2"
+              ></i>
+              <span>Have a Question?</span>
+            </div>
+            <div class="text-sm mb-3 flex items-center">
+              <i
+                class="fas fa-envelope p-2 rounded-full border border-white bg-white/10 text-white mr-2"
+              ></i>
+              <span>safecart@gmail.com</span>
+            </div>
+            <div class="flex space-x-3">
+              <a href="#" class="text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Shop Section -->
+          <div class="col-span-1 md:col-span-2 mb-4">
+            <h5 class="font-bold mb-3">Shop</h5>
+            <ul class="list-none text-sm space-y-3">
+              <li><a href="#" class="text-white hover:underline">Shop</a></li>
+              <li>
+                <a href="#" class="text-white hover:underline">My Orders</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Categories Section -->
+          <div class="col-span-1 md:col-span-2 mb-4">
+            <h5 class="font-bold mb-3">Categories</h5>
+            <ul class="list-none text-sm space-y-3">
+              <li>
+                <a href="#" class="text-white hover:underline">Gadget Items</a>
+              </li>
+              <li>
+                <a href="#" class="text-white hover:underline">Fashion Wear</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- About Section -->
+          <div class="col-span-1 md:col-span-2 mb-4">
+            <h5 class="font-bold mb-3">About</h5>
+            <ul class="list-none text-sm space-y-3">
+              <li><a href="#" class="text-white hover:underline">About</a></li>
+              <li><a href="#" class="text-white hover:underline">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Section -->
+          <div class="col-span-1 md:col-span-3 mb-4">
+            <h5 class="font-bold mb-3">Newsletter</h5>
+            <p class="text-sm mb-3">
+              Be the first one to know about discounts, offers and events.
+              Unsubscribe whenever you like.
+            </p>
+            <form>
+              <div class="relative">
+                <input
+                  type="email"
+                  class="w-full p-3 rounded-full bg-[#334755] text-white placeholder-white"
+                  placeholder="Enter Your Email"
+                />
+                <button
+                  type="submit"
+                  class="absolute top-0 right-0 h-full bg-white text-[#00192b] px-4 py-2 rounded-full"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
 
-    <!-- footer section start  -->
-    <!-- product section end  -->
-    <!-- navbar toggle icon  -->
+    <!-- footer section end  -->
+
     <script>
       // Toggle Mobile Menu
       const menuButton = document.getElementById("mobile-menu-button");
