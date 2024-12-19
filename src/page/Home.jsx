@@ -5,6 +5,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import headPhone from "../assets/image/homeBanner/pngwing 1.png";
 import washingMachine from "../assets/image/homeBanner/pngegg 1.png";
 import model from "../assets/image/homeBanner/5281687 1.png";
+import Awards from "../components/Awards";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 const Home = () => {
@@ -60,16 +61,16 @@ const Home = () => {
 
           {/* right */}
           <div
-            className="d-flex rounded-2 flex-column flex-sm-row position-relative"
+            className="d-flex rounded-2 flex-column flex-sm-row position-relative "
             style={{
               background: "#62CDFF",
               height: "",
             }}
           >
             <div className=" p-1 p-md-5 ">
-              <div>
+              <div className="">
                 <h6>WINTER 2024 Offer</h6>
-                <h2 className="fw-bold ">
+                <h2 className="fw-bold fs-2 mt-5">
                   Grab the best fashion deals in this winter
                 </h2>
               </div>
@@ -93,20 +94,20 @@ const Home = () => {
         </div>
 
         {/* popular product */}
-        <div>
+        <div className="mt-5">
           <div className="d-flex justify-content-between">
             <h3>Popular Products</h3>
             <button
-              className="border-0 bg-transparent text-success"
+              className="border-0 bg-transparent text-success flex justify-center items-center gap-2"
               type="button"
             >
               See All{" "}
               <span className="">
-                <MdArrowForwardIos className=" mb-1" />
+                <MdArrowForwardIos className="" />
               </span>
             </button>
           </div>
-          <hr />
+          <hr className="my-4" />
           <div className="row">
             {products.map((product) => (
               <div key={product.id} className="col-lg-2 col-md-4 col-12 mb-4">
@@ -115,6 +116,12 @@ const Home = () => {
             ))}
           </div>
         </div>
+
+            {/* awards */}
+            <div className="my-5">
+            <Awards />
+            </div>
+
       </div>
       <FooterBootstrap />
     </div>

@@ -21,29 +21,36 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div>
-      <Card className="border-0 w-auto h-auto ">
+    <div className="group">
+      {/* Card */}
+      <Card className="border-0 w-auto h-auto shadow-md transform transition duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-lg">
+        {/* Image */}
         <Card.Img
-          className="w-auto h-auto"
+          className="w-auto h-auto rounded-t-md"
           variant="top"
           src={product?.image}
         />
-        <Card.Body className="fs-6">
+        
+        {/* Card Body */}
+        <Card.Body className="fs-6 p-4">
+          {/* Rating */}
           <CardText
-            className="rounded d-flex justify-center items-center max-w-min px-2"
-            style={{
-              color: "#FFC436",
-              backgroundColor: "#FFF5DF",
-              
-            }}
+            className="rounded d-flex justify-center items-center max-w-min px-2 mb-2 text-yellow-600 bg-yellow-100"
           >
-            <FaStar className=" mr-2 " /> {product?.rating}
+            <FaStar className="mr-2" /> {product?.rating}
           </CardText>
-          <Card.Title className="fs-6 fw-normal ">
+
+          {/* Title */}
+          <Card.Title className="fs-6 fw-normal text-gray-800 mb-4 group-hover:text-blue-600 transition duration-300">
             {product?.productName}
           </Card.Title>
 
-          <Button variant="primary" onClick={handleBuy}>
+          {/* Button */}
+          <Button
+            variant="primary"
+            className="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transform transition duration-300 ease-in-out"
+            onClick={handleBuy}
+          >
             Buy Now
           </Button>
         </Card.Body>
