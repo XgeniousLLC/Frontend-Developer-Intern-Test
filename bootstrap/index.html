@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Safe Cart - Online shopping for gadgets, fashion, home appliances, and more">
+    <meta name="keywords" content="Safe Cart, online store, gadgets, fashion, home appliances, shopping">
+    <title>Safe Cart</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        .size-44 {
+            width: 44px;
+            height: 44px;
+        }
+        .search-btn{
+            outline: none;
+            width: 44px;
+            border: 2px solid #E0ECE9;
+            border-radius: 4px;
+        }
+        .search-btn img{
+            padding: 8px;
+        }
+
+        .offer-1-btn {
+            background-color: #F6F54D;
+            margin-top: 28px;
+            font-weight: 500;
+            padding: 10px 34px;
+            transition: 400ms;
+        }
+
+        .offer-1-btn:hover {
+            background-color: #0C1230;
+            color: white;
+        }
+
+        .offer-2 {
+            background-image: url('../assets/images/banner/Group-2.png');
+            background-size: cover;
+            background-position: top right;
+        }
+
+        .offer-2-text {
+            width: 50%;
+            display: flex;
+            gap: 10px;
+            margin: 60px;
+        }
+
+        .offer-2-text h3 {
+            font-weight: 300;
+        }
+
+        .offer-2-text img {
+            margin-top: 50px;
+            width: 80px !important;
+        }
+
+        .offer-2-text h3 {
+            font-weight: 500;
+        }
+
+        .cotton {
+            top: 50%;
+            right: 30%;
+        }
+
+        .offer-3 {
+            background-color: #F4F300;
+        }
+
+        .offer-3 h3 {
+            font-size: 20px;
+        }
+
+        .offer-3 h2 {
+            font-size: 40px;
+        }
+
+        #getDeals {
+            width: 180px;
+            margin-bottom: 60px;
+            margin-left: 60px;
+            border: 0;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        #getDeals:hover {
+            background-color: #F6F54D;
+            color: #000000;
+        }
+
+        .offer-3 img {
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+        }
+
+        .product-cards {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            position: relative;
+            border: 0;
+            transition: 500ms;
+        }
+
+        .card img {
+            border: 0;
+        }
+
+        .card-body {
+            padding: 16px 16px 16px 0;
+        }
+
+        .card-body div {
+            color: #FFC436;
+            background-color: #FFF5DF;
+            display: flex;
+            width: 80px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .card:hover {
+            box-shadow: 0px 10px 50px -10px gray;
+            scale: 1.05;
+        }
+
+        .buy-now {
+            position: absolute;
+            padding: 10px 20px;
+            top: 50%;
+            left: 50%;
+            border-radius: 50px;
+            border: 0;
+            background-color: rgb(34 197 94);
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transition: 0.5s ease, transform 0.5s ease;
+        }
+
+        .card:hover .buy-now {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .card-value {
+            color: #006044 !important;
+            font-weight: 700;
+        }
+
+        .card-title {
+            color: #1D2939;
+        }
+
+        footer {
+            padding-top: 80px;
+            background-color: #00192B;
+        }
+
+        .contact p {
+            color: #B2BABF !important;
+            margin: 0;
+        }
+
+        .links {
+            display: flex;
+        }
+
+        .links div {
+            min-width: 130px;
+        }
+
+        .links div ul li a {
+            color: #B2BABF;
+            text-decoration: none;
+        }
+
+        .newsletter p {
+            color: #B2BABF;
+        }
+
+        .newsletter form {
+            background-color: #FFFFFF66;
+            justify-content: space-between;
+            padding: 5px;
+        }
+
+        .newsletter input {
+            border: 0;
+            background-color: transparent;
+            outline: none;
+        }
+
+        .newsletter button {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            border: 0;
+        }
+
+        ::placeholder {
+            color: #FFFFFF99;
+            opacity: 1;
+        }
+
+        @media only screen and (max-width: 1280px) {
+            .offer-2-text h3 {
+                font-weight: 500;
+            }
+
+            .offer-2-text h2 {
+                font-weight: 700;
+            }
+
+            .offer-2-text img {
+                width: 60px;
+            }
+
+            .offer-2 {
+                min-height: 450px;
+            }
+
+            #getDeals {
+                width: 120px;
+                margin-bottom: 30px;
+                margin-left: 30px;
+            }
+
+            .product-cards {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+
+            .hero-banner {
+                display: flex;
+                gap: 20px;
+            }
+
+            .offer-3 h3 {
+                font-size: 16px;
+            }
+
+            .offer-3 h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .offer-2-text h3 {
+                font-weight: 400;
+            }
+
+            .offer-2-text img {
+                width: 50px !important;
+            }
+
+            .offer-2-text h2 {
+                font-weight: 600;
+            }
+
+            .product-cards {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+            }
+
+            #getDeals {
+                width: 80px;
+                margin-bottom: 15px;
+                margin-left: 15px;
+            }
+
+            .offer-2-text {
+                width: 40%;
+                margin: 20px;
+            }
+
+            .offer-3 h3 {
+                font-size: 12px;
+            }
+
+            .offer-3 h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="shadow-sm">
+        <div class="container py-5 px-4 mx-auto d-flex flex-column flex-md-row gap-4 justify-content-between text-white"
+            style="background-color: #00192B;">
+            <div class="d-flex flex-column flex-md-row gap-4">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="../assets/images/icons/telephone.svg" alt="">
+                    <a href="tel:678 999-9635" class="text-white text-decoration-none">(678) 999-9635</a>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <img src="../assets/images/icons/map-pin.svg" alt="">
+                    <p class="m-0">96872 Boulevard Rd, CA</p>
+                </div>
+            </div>
+            <div>
+                <a href="#" class="d-flex align-items-center gap-3 text-white text-decoration-none">
+                    <img src="../assets/images/icons/delevary-van.svg" alt="">
+                    <p class="m-0">Track an Order</p>
+                </a>
+            </div>
+        </div>
+        <div class="container py-5 px-4 mx-auto d-flex justify-content-between">
+            <div class="d-flex gap-4">
+                <a href="#">
+                    <img src="../assets/images/icons/logo.svg" alt="Logo">
+                </a>
+                <div class="d-none d-lg-flex align-items-center gap-4">
+                    <div class="d-flex h-14">
+                        <span class="border-start h-100"></span>
+                    </div>
+                    <button class="d-flex align-items-center gap-2 text-success border-0 bg-white">
+                        <img src="/assets/images/icons/menu.svg" alt="">
+                        <span class="font-medium">Categories</span>
+                    </button>
+                    <form id="search" action="#" class="d-flex align-items-center gap-2"
+                        style="height: 44px; width: 636px;">
+                        <input type="text" class="form-control" placeholder="Search an item..."
+                            style="height: 100%; width: calc(100% - 52px);">
+                        <span class="search-btn ">
+                            <img class="h-100 w-100 " src="../assets/images/icons/search.svg" alt="Search">
+                        </span>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <a href="#">
+                    <img class="d-lg-none custom-svg" src="/assets/images/icons/menu.svg" alt="">
+                </a>
+                <a href="#" class="border-2 border rounded-circle d-none d-md-block">
+                    <img class="p-2 size-44" src="../assets/images/icons/heart.svg" alt="Wishlist">
+                </a>
+                <a href="#" class="border-2 border rounded-circle d-none d-md-block">
+                    <img class="p-2 size-44" src="../assets/images/icons/user.svg" alt="User">
+                </a>
+                <a href="#" class="border-2 border rounded-circle d-none d-md-block">
+                    <img class="p-2 size-44" src="../assets/images/icons/shopping-cart.svg" alt="Cart">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="container py-4 px-4">
+        <section class="row hero-banner">
+            <div class="col-xl-4 col-12 gap-4 d-grid " id="banner">
+                <div class="d-flex justify-content-between align-items-center rounded"
+                    style="background: linear-gradient(to bottom right, #62cdff, #62cdff, #0080c2);">
+                    <div class="p-4">
+                        <h6 class="text-white text-uppercase">Novembers Gadget Madness</h6>
+                        <h2 class="text-black">20% Off</h2>
+                        <button class="offer-1-btn border-0 rounded-pill">Get Offer</button>
+                    </div>
+                    <img class="img-fluid overflow-hidden" src="../assets/images/banner/offer-1.png" alt="Gadget Sale">
+                </div>
+                <div class="p-4 offer-3 rounded">
+                    <div class="text-center">
+                        <h3 class="text-black ">Cyber Monday Special</h3>
+                        <h2 class="text-black">Home Appliances</h2>
+                    </div>
+                    <img src="../assets/images/banner/offer-3.png" alt="Home Appliances Sale">
+                </div>
+            </div>
+            <div class="col-xl-8 col-12 rounded position-relative ">
+                <div class="d-flex flex-column justify-content-between h-100 offer-2 rounded">
+                    <div class="d-flex flex-column offer-2-text">
+                        <h3 class="text-black text-uppercase">Winter 2024 Offer</h3>
+                        <h2 class="text-black">Grab the best fashion deals this winter</h2>
+                        <img src="../assets/images/banner/offer-2-pagination.svg" alt="Winter Offer" class="">
+                    </div>
+                    <a id="getDeals" href="#"
+                        class="btn btn-dark rounded-pill px-1 py-1 px-md-2 py-md-2 px-xl-4 py-xl-3 mt-3">Get
+                        Deals</a>
+                </div>
+                <div
+                    class="position-absolute cotton d-none d-md-flex align-items-center rounded-pill bg-white px-4 py-2">
+                    <img class="me-2" style="width: 20px; height: 20px;" src="../assets/images/banner/cotton.png"
+                        alt="Cotton">
+                    <span class="text-uppercase fw-medium text-black">94% Cotton Made</span>
+                </div>
+            </div>
+        </section>
+        <section class="mt-5">
+            <div class="d-flex justify-content-between">
+                <h4 class="font-bold text-black">Popular Products</h4>
+                <a href="#" class="d-flex align-items-center gap-2 text-decoration-none">
+                    <span class="font-medium text-primary">View All</span>
+                    <img src="../assets/images/icons/right-arrow.svg" alt="Arrow">
+                </a>
+            </div>
+            <hr class="border-secondary my-6">
+            <div class="product-cards">
+                <div class="card">
+                    <img src="../assets/images/products/ugly-sweater.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">Pink Premium Long Ugly Sweater</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/products/siram.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">Pink Premium Serum</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/products/router.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">Wireless-AC3100 Dual Band Gigabit Router RT-AC88U</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/products/headphones.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">Sony beat Noise-Canceling BGM Headphone</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/products/mouse.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">Logitech G304 LIGHT SPEED Wireless Gaming Mouse (Black)</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/products/t-shirt.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">SMUG. Premium T-shirt Fabric soft and comfortable</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/products/colling fan.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">Cooling Fan</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/products/helmet.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">Rider's First Choice Cool Helmet</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/products/monitor.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">Acer KA222Q H 21.5 Inch 100 HZ Full HD Monitor</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/products/ladis-shoe.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">Red Premium Ladys Shoe</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/products/bag.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">Yellow Premium Big Bag - Comfortable</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/products/grinder.png" class="" alt="Ugly Sweater">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="../assets/images/icons/star.svg" alt="Star">
+                            <p class="m-0">4.5<span>(95)</span></p>
+                        </div>
+                        <h5 class="card-title">Phillips Pro Blend 6 Powerful Blender & Meat Grinder</h5>
+                        <p class="font-bold card-value">
+                            $223.99
+                            <span class="text-muted text-decoration-line-through fw-normal">$267.60</span>
+                        </p>
+                    </div>
+                    <button class=" buy-now">Buy Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="container mx-auto pt-10 pb-10 px-4 shadow">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img class="mb-4" src="../assets/images/icons/vendor.svg" alt="" style="width: 40px;">
+                <h6 class="mb-1 fw-medium">1,900+ Vendors</h6>
+                <p>1,900 Vendors are working with us around the US</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img class="mb-4" src="../assets/images/icons/customer.svg" alt="" style="width: 40px;">
+                <h6 class="fw-medium">9,102+ Customers</h6>
+                <p>9,102+ Customers are making retained purchases every now & then</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img class="mb-4" src="../assets/images/icons/trophy.svg" alt="" style="width: 40px;">
+                <h6 class="fw-medium">12 Awards</h6>
+                <p>We won 12 awards for excellency in customer service</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="px-4">
+        <div class="container">
+            <div class="row ">
+                <!-- Contact Information okaaaaaaaaaa-->
+                <div class="col-xl-4 d-flex flex-column gap-4 contact">
+                    <!-- Location -->
+                    <div class="d-flex gap-3 align-items-center">
+                        <span class="rounded-circle border p-2 bg-dark d-flex align-items-center justify-content-center"
+                            style="width: 48px; height: 48px;">
+                            <img src="../assets/images/icons/map-pin.svg" alt="">
+                        </span>
+                        <div>
+                            <p class="small">Location</p>
+                            <h4 class="text-white fw-bold">New York, NY, USA</h4>
+                        </div>
+                    </div>
+                    <!-- Telephone -->
+                    <div class="d-flex gap-3 align-items-center">
+                        <span class="rounded-circle border p-2 bg-dark d-flex align-items-center justify-content-center"
+                            style="width: 48px; height: 48px;">
+                            <img src="../assets/images/icons/telephone.svg" alt="">
+                        </span>
+                        <div>
+                            <p class="text-muted small">Have a question?</p>
+                            <h4 class="text-white fw-bold">324-094-3233</h4>
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="d-flex gap-3 align-items-center">
+                        <span class="rounded-circle border p-2 bg-dark d-flex align-items-center justify-content-center"
+                            style="width: 48px; height: 48px;">
+                            <img src="../assets/images/icons/mail.svg" alt="">
+                        </span>
+                        <div>
+                            <p class="text-muted small">Contact us at</p>
+                            <h4 class="text-white fw-bold">safecart@mail.com</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Links Section -->
+                <div class="col-xl-4 row links">
+                    <!-- Shop Links -->
+                    <div class="col-2 col-md-4">
+                        <h4 class="text-white fw-bold">Shop</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">My Orders</a></li>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track My Order</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <!-- Categories Links -->
+                    <div class="col-6 col-md-4">
+                        <h4 class="text-white fw-bold">Categories</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Gadget Items</a></li>
+                            <li><a href="#">Fashion & Wear</a></li>
+                            <li><a href="#">Home Appliances</a></li>
+                            <li><a href="#">Pet Foods</a></li>
+                            <li><a href="#">Surveillance Cameras</a></li>
+                            <li><a href="#">Monitors</a></li>
+                            <li><a href="#">Smart Watches</a></li>
+                        </ul>
+                    </div>
+                    <!-- About Links -->
+                    <div class="col-6 col-md-4">
+                        <h4 class="text-white fw-bold">About</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Newsletter Section -->
+                <div class="col-xl-4 newsletter">
+                    <h4 class="text-white fw-bold">Newsletter</h4>
+                    <p>Be the first one to know about discounts, offers, and events. Unsubscribe whenever you like.</p>
+                    <form class="d-flex gap-2 mt-2 rounded-pill">
+                        <img class="ps-2" src="../assets/images/icons/mail.svg" alt="">
+                        <input class="w-100 border-0" type="email" placeholder="Enter your email">
+                        <button type="submit" class="">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+        const buttons = document.querySelectorAll('.buy-now');
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                alert('Product added to the cart');
+            });
+        });
+    </script>
+</body>
+
+</html>
