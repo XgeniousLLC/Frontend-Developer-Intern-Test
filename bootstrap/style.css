@@ -7,7 +7,10 @@
     border-left: 2px solid #B2BABF;
     height: 30px;
 }
-
+.search-input{
+    outline: none;
+    border: 2px solid #E0ECE9;
+}
 .search-btn {
     outline: none;
     width: 44px;
@@ -133,10 +136,11 @@
 
 .buy-now {
     position: absolute;
-    padding: 10px 20px;
+    color: white;
+    padding: 5px 10px;
     top: 50%;
     left: 50%;
-    border-radius: 50px;
+    border-radius: 15px;
     border: 0;
     background-color: rgb(34 197 94);
     opacity: 0;
@@ -147,6 +151,11 @@
 .card:hover .buy-now {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.1);
+    
+}
+.buy-now:hover {
+    background-color: rgba(34, 197, 94, 0.634);
+    color: black;
 }
 
 .card-value {
