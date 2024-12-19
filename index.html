@@ -13,6 +13,15 @@
             justify-content: center;
             justify-items: center;
             align-items: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
             gap: 30px;
         }
 
@@ -27,16 +36,24 @@
         }
 
         @media only screen and (max-width: 600px) {
-            body {
+
+            body,
+            div {
                 flex-direction: column;
+            }
+            h1{
+                text-align: center;
             }
         }
     </style>
 </head>
 
 <body>
-    <a href="tailwind/index.html">Design with Tailwind</a>
-    <a href="bootstrap/index.html">Design with Bootstrap</a>
+    <h1>Jahid Hasan's frontend test submission</h1>
+    <div class="">
+        <a href="tailwind/index.html">Design with Tailwind</a>
+        <a href="bootstrap/index.html">Design with Bootstrap</a>
+    </div>
 </body>
 
 </html>
