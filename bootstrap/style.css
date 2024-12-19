@@ -1,0 +1,340 @@
+.size-44 {
+    width: 44px;
+    height: 44px;
+}
+
+.search-btn {
+    outline: none;
+    width: 44px;
+    border: 2px solid #E0ECE9;
+    border-radius: 4px;
+}
+
+.search-btn img {
+    padding: 8px;
+}
+
+.offer-1-btn {
+    background-color: #F6F54D;
+    margin-top: 28px;
+    font-weight: 500;
+    padding: 10px 34px;
+    transition: 400ms;
+}
+
+.offer-1-btn:hover {
+    background-color: #0C1230;
+    color: white;
+}
+
+.offer-2 {
+    background-image: url('../assets/images/banner/Group-2.png');
+    background-size: cover;
+    background-position: top right;
+    height: 680px;
+}
+
+.offer-2-text {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    margin: 60px;
+}
+
+.offer-2-text h3 {
+    font-weight: 300;
+}
+
+.offer-2-text img {
+    margin-top: 50px;
+    width: 80px !important;
+}
+
+.offer-2-text h3 {
+    font-weight: 500;
+}
+
+.cotton {
+    top: 50%;
+    right: 30%;
+}
+
+.offer-3 {
+    background-color: #F4F300;
+}
+
+.offer-3 h3 {
+    font-size: 20px;
+}
+
+.offer-3 h2 {
+    font-size: 40px;
+}
+
+#getDeals {
+    margin-bottom: 60px;
+    margin-left: 60px;
+    border: 0;
+    color: #ffffff;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+#getDeals:hover {
+    background-color: #F6F54D;
+    color: #000000;
+}
+
+.offer-3 img {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.product-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+}
+
+.card {
+    position: relative;
+    border: 0;
+    transition: 500ms;
+}
+
+.card img {
+    border: 0;
+}
+
+.card-body {
+    padding: 16px 16px 16px 0;
+}
+
+.card-body div {
+    color: #FFC436;
+    background-color: #FFF5DF;
+    display: flex;
+    width: 80px;
+    align-items: center;
+    justify-items: center;
+}
+
+.card:hover {
+    box-shadow: 0px 10px 50px -10px gray;
+    scale: 1.05;
+}
+
+.buy-now {
+    position: absolute;
+    padding: 10px 20px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50px;
+    border: 0;
+    background-color: rgb(34 197 94);
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease, transform 0.5s ease;
+}
+
+.card:hover .buy-now {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.card-value {
+    color: #006044 !important;
+    font-weight: 700;
+}
+
+.card-title {
+    color: #1D2939;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+footer {
+    padding-top: 80px;
+    background-color: #00192B;
+}
+
+.contact {
+    margin-bottom: 30px;
+}
+
+.contact p {
+    color: #B2BABF !important;
+    margin: 0;
+}
+
+.links {
+    display: flex;
+}
+
+.links h4,
+.newsletter h4,
+.contact h4 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.links div {
+    min-width: 130px;
+}
+
+.links div ul li a {
+    color: #B2BABF;
+    text-decoration: none;
+}
+
+.links div ul li {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.newsletter {
+    max-width: 457px;
+    margin: 0 auto;
+}
+
+.newsletter p {
+    color: #B2BABF;
+}
+
+.newsletter form {
+    background-color: #FFFFFF66;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.newsletter input {
+    border: 0;
+    background-color: transparent;
+    outline: none;
+}
+
+.newsletter button {
+    font-size: 14px;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    border: 0;
+    padding: 5px 20px;
+}
+
+::placeholder {
+    color: #FFFFFF99;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1280px) {
+    .offer-2-text h3 {
+        font-weight: 500;
+    }
+
+    .offer-2-text h2 {
+        font-weight: 700;
+    }
+
+    .offer-2-text img {
+        width: 60px;
+    }
+
+    .offer-2 {
+        height: 400px;
+    }
+
+    #getDeals {
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+
+    .product-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .hero-banner {
+        display: flex;
+        gap: 20px;
+    }
+
+    .offer-3 h3 {
+        font-size: 16px;
+    }
+
+    .offer-3 h2 {
+        font-size: 30px;
+    }
+
+    .newsletter h4 {
+        margin-top: 25px;
+        text-align: center !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .hero-banner,
+    div {
+        padding: 0 !important;
+    }
+
+    .offer-2-text h3 {
+        font-weight: 400;
+    }
+
+    .offer-2-text img {
+        width: 50px !important;
+    }
+
+    .offer-2-text h2 {
+        font-weight: 600;
+    }
+
+    .product-cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    #getDeals {
+        margin-bottom: 15px;
+        margin-left: 15px;
+    }
+
+    .offer-2 {
+        height: 350px;
+    }
+
+    .offer-2-text {
+        width: 40%;
+        margin: 20px;
+    }
+
+    .offer-3 h3 {
+        font-size: 12px;
+    }
+
+    .offer-3 h2 {
+        font-size: 20px;
+    }
+
+    .links div ul li,
+    h4 {
+        text-align: center;
+    }
+    footer{
+        padding-top: 30px;
+    }
+    .contact{
+        margin-left: 50px;
+    }
+    .newsletter{
+        text-align: center;
+    }
+    .newsletter form{
+        margin: 0 25px;
+    }
+
+}
