@@ -1,0 +1,18 @@
+/* universal css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-main {
+  color: #e527b2;
+}
+
+.text-second {
+  color: #3d1ff1;
+}
+
+.bg-main {
+  background-color: #e527b2;
+}

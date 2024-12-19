@@ -1,0 +1,17 @@
+/* universal css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer-icon-style {
+  border: 1px solid #ffffff33;
+  padding: 14px;
+  border-radius: 30px;
+  background-color: #ffffff14;
+}
+
+#social-icon > a :hover {
+  background-color: #00192b;
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Page - Figma</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon-bootstrap.png"
+      type="image/x-icon"
+    />
+    <!-- tailwind CDN link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- icons - fontAwesome CDN link -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- toastify CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section
+        id="hero-sec"
+        class="grid grid-cols-12 gap-6 px-6 md:px-16 lg:px-32 xl:px-[156px] py-4"
+      >
+        <!-- Left Column -->
+        <div class="col-span-12 md:col-span-4">
+          <div
+            class="w-full h-[180px] md:h-[276px] bg-gradient-to-r from-[#62CDFF] to-[#0080C2] mb-4 md:mb-6 flex tween items-center rounded-lg"
+          >
+            <div class="pl-8 pb-2 md:pb-0">
+              <p class="font-medium text text-base text-white mb-2">
+                Novembers <br />
+                Gadget Madness
+              </p>
+              <p class="font-bold text-3xl md:text-5xl text-[#173459] mb-7">
+                20% OFF
+              </p>
+              <button
+                class="w-[140px] h-[44px] bg-[#F6F54D]/90 text-[#0C1230] px-8 py-2 rounded-full hover:bg-[#F6F54D]"
+              >
+                Get Offer
+              </button>
+            </div>
+            <img
+              src="../assets/earphone.png"
+              alt="earphone"
+              class="w-[150px] h-[235px] md:h-[276px] cover"
+            />
+          </div>
+          <div
+            class="w-full h-[240px] md:h-[412px] bg-[#F4F300] text-center flex flex-col justify-between rounded-lg"
+          >
+            <p class="font-medium text-5 pt-6">Cyber Monday Special</p>
+            <h3 class="font-bold text-10">HOME APPLIANCES</h3>
+
+            <img
+              src="../assets/fridge-wash.png"
+              alt="product"
+              class="w-[520px] h-[200px] md:h-[284px] mt-auto"
+            />
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div
+          class="col-span-12 md:col-span-8 h-auto md:h-[712px] bg-gradient-to-r from-[#62CDFF] to-[#0080C2] flex flex-col md:flex-row justify-between rounded-lg overflow-hidden"
+        >
+          <!-- Content Area -->
+          <div class="my-6 md:my-[60px] flex flex-col items-start">
+            <div class="ml-6 md:ml-[30px]">
+              <p class="font-medium text-lg md:text-xl text-[#1D2939]">
+                WINTER 2024 Offer
+              </p>
+              <h3 class="font-bold text-4xl md:text-6xl mt-2 md:mt-4">
+                Grab the best <br />
+                fashion deals in <br />
+                this winter
+              </h3>
+              <!-- Indicators -->
+              <div class="flex items-center gap-x-2 mt-4 md:mt-[40px]">
+                <p class="w-[12px] h-[12px] bg-white rounded-full"></p>
+                <p class="w-[12px] h-[12px] bg-white rounded-full"></p>
+                <p class="w-[32px] h-[12px] bg-white rounded-full"></p>
+                <p class="w-[12px] h-[12px] bg-white rounded-full"></p>
+              </div>
+            </div>
+            <img
+              src="../assets/vector.png"
+              alt=""
+              class="hidden md:block mt-4 md:mt-8"
+            />
+            <button
+              class="w-[160px] md:w-[200px] h-[50px] md:h-[60px] bg-[#0C1230]/90 text-white rounded-full hover:bg-[#0C1230] mt-6 md:mt-auto ml-6 md:mx-[63px] md:py-4"
+            >
+              Get Details
+            </button>
+          </div>
+
+          <!-- Person Image -->
+          <div
+            class="w-full md:w-[643px] mt-4 md:mt-0 mx-auto md:mx-0 md:mr-0 relative"
+          >
+            <div
+              class="flex items-center px-4 py-5 gap-4 w-[286px] h-[68px] bg-white rounded-full absolute top-[341px] md:right-[100px]"
+            >
+              <img
+                src="../assets/cotton.png"
+                alt="cotton"
+                class="w-[32px] h-[28px] object-contain"
+              />
+              <p class="font-medium text-xl">95% COTTON MADE</p>
+            </div>
+            <img
+              src="../assets/person.png"
+              alt="person"
+              class="w-full md:w-[643px] h-auto md:h-[712px]"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Products Section -->
+      <section class="px-4 md:mx-[156px] py-10">
+        <div class="flex justify-between items-center">
+          <h2 class="text-4xl font-bold">Popular Products</h2>
+          <a
+            href="#"
+            class="text-green-600 hover:underline flex items-center gap-1"
+          >
+            View All <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </div>
+        <hr class="my-4 border-gray-300" />
+        <div
+          id="productGrid"
+          class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-11"
+        >
+          <!-- Product cards will be dynamically inserted here -->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- Summary Section -->
+      <section
+        class="shadow grid grid-cols-1 md:grid-cols-3 gap-6 text-center p-8"
+      >
+        <div>
+          <i
+            class="fa-solid fa-building-columns text-[#fd8d14] bg-[#fd8d141a] border-2 border-[#fd8d14] rounded-full p-5 inline-block"
+          ></i>
+          <h3 class="text-xl font-bold mt-4">1,920+ Vendors</h3>
+          <p class="text-gray-600 mt-2">
+            1,900 Vendors are working with us around the US
+          </p>
+        </div>
+        <div>
+          <i
+            class="fa-regular fa-user text-[#525fe1] bg-[#525fe11a] border-2 border-[#525fe1] rounded-full p-5 inline-block"
+          ></i>
+          <h3 class="text-xl font-bold mt-4">9,102+ Customers</h3>
+          <p class="text-gray-600 mt-2">
+            9,102+ Customers are making retained purchases every now & then
+          </p>
+        </div>
+        <div>
+          <i
+            class="fa-solid fa-trophy text-[#006044] bg-[#0060441a] border-2 border-[#006044] rounded-full p-5 inline-block"
+          ></i>
+          <h3 class="text-xl font-bold mt-4">12 Awards</h3>
+          <p class="text-gray-600 mt-2">
+            We won 12 awards for excellency in customer service
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer Links Section -->
+      <section class="bg-[#00192B] text-white py-10">
+        <div
+          class="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8"
+        >
+          <!-- Location and Contact Info -->
+          <div>
+            <div class="flex items-center mb-4">
+              <i class="fas fa-map-marker-alt text-lg mr-2"></i>
+              <p>
+                Location <br />
+                <strong>New York, NY, USA</strong>
+              </p>
+            </div>
+            <div class="flex items-center mb-4">
+              <i class="fas fa-phone-alt text-lg mr-2"></i>
+              <p>
+                Have a question? <br />
+                <strong>324-094-3233</strong>
+              </p>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-envelope text-lg mr-2"></i>
+              <p>
+                Contact us at: <br />
+                <strong>safecart@mail.com</strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- Shop Links -->
+          <div>
+            <h6 class="font-bold mb-4">Shop</h6>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-gray-400">Shop</a></li>
+              <li><a href="#" class="hover:text-gray-400">My Orders</a></li>
+              <li><a href="#" class="hover:text-gray-400">My Account</a></li>
+              <li>
+                <a href="#" class="hover:text-gray-400">Track My Order</a>
+              </li>
+              <li><a href="#" class="hover:text-gray-400">Return Policy</a></li>
+              <li><a href="#" class="hover:text-gray-400">Refund Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Categories -->
+          <div>
+            <h6 class="font-bold mb-4">Categories</h6>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-gray-400">Gadget Items</a></li>
+              <li>
+                <a href="#" class="hover:text-gray-400">Fashion & Wear</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-400">Home Appliances</a>
+              </li>
+              <li><a href="#" class="hover:text-gray-400">Pet Foods</a></li>
+              <li>
+                <a href="#" class="hover:text-gray-400">Surveillance Cameras</a>
+              </li>
+              <li><a href="#" class="hover:text-gray-400">Smart Watches</a></li>
+            </ul>
+          </div>
+
+          <!-- About Links -->
+          <div>
+            <h6 class="font-bold mb-4">About</h6>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-gray-400">About Us</a></li>
+              <li><a href="#" class="hover:text-gray-400">FAQ</a></li>
+              <li><a href="#" class="hover:text-gray-400">Help</a></li>
+              <li><a href="#" class="hover:text-gray-400">Contact Us</a></li>
+              <li>
+                <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-400">Terms & Conditions</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div>
+            <h6 class="font-bold mb-4">Newsletter</h6>
+            <p class="text-sm mb-4">
+              Be the first to know about discounts, offers, and events.
+              Unsubscribe whenever you like.
+            </p>
+            <form>
+              <div
+                class="flex items-center gap-2 bg-[#ffffff33] border border-[#ffffff66] rounded-full p-2 w-80"
+              >
+                <span class="text-white text-lg">&#9993;</span>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="w-full bg-transparent text-white outline-none"
+                />
+                <button class="bg-white text-black px-4 py-2 rounded-full">
+                  Submit
+                </button>
+              </div>
+            </form>
+
+            <!-- Social Media Icons -->
+            <div class="flex mt-4" id="social-icon">
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-facebook-f footer-icon-style"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-twitter footer-icon-style"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-instagram footer-icon-style"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-linkedin footer-icon-style"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- script - JS -->
+    <script src="index.js"></script>
+    <!-- toastify script link -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </body>
+</html>
