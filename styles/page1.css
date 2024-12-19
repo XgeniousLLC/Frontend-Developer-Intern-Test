@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  font-family: "Inter", serif !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* navbar styling starts from here */
+.navbar-2 {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.navbar-2 .heading {
+  width: 200px;
+  object-fit: contain;
+}
+.navbar-2 .line {
+  height: 100%;
+}
+.navbar-2 .hamburger {
+  width: 25px !important;
+  object-fit: contain !important;
+}
+
+.navbar-2 .search-input {
+  width: 100% !important;
+  max-width: 500px !important;
+  border: 1px solid rgb(224, 236, 233) !important;
+}
+
+.navbar-2 .button {
+  border: 1px solid rgb(224, 236, 233) !important;
+}
+
+.navbar-2 .magnify {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.navbar-2 .nav-right-icons {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.navbar-2 .nav-right-buttons {
+  height: 45px !important;
+  width: 45px !important;
+}
+
+.navbar-2 h4 {
+  color: rgb(0, 96, 68);
+}
+
+.navbar-links a:hover {
+  text-decoration: underline !important;
+}
+/* navbar styling ends here */
+
+/* products section styling starts here*/
+
+.products-main {
+  width: 90%;
+  max-width: 1200px;
+  font-family: "DM Sans", serif !important;
+}
+
+.product-card .rate {
+  background: rgb(255, 245, 223) !important;
+  width: max-content;
+  font-size: 14px;
+  color: rgb(255, 196, 54);
+}
+.product-card .rate img {
+  width: 14px;
+}
+
+.product-card p {
+  color: #006044;
+}
+
+.product-card span {
+  color: #667085 !important;
+  font-size: 14px;
+}
+/* products section styling ends here*/
+
+/* footer section styling starts here*/
+.footer-container {
+  background-color: rgb(0, 25, 43) !important;
+  font-family: "DM Sans", serif;
+}
+
+.footer-body {
+  width: 90%;
+  max-width: 1400px;
+}
+
+.footer-body .link-list {
+  color: rgb(178, 186, 191);
+}
+
+.footer-body .link-lists {
+  gap: 50px;
+}
+
+.footer-icon-container {
+  background-color: #142b3c;
+  height: 50px;
+  width: 50px;
+}
+
+.footer-icon-container img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-body .input-container {
+  background-color: #334755;
+}
+
+.footer-body .input-container input {
+  outline: none;
+}
+
+.footer-last {
+  max-width: 300px;
+}
+
+.footer-last .social-icon {
+  height: 25px !important;
+  width: 25px !important;
+}
+
+/* footer section styling ends here*/
