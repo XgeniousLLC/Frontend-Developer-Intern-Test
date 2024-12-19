@@ -5,6 +5,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import headPhone from "../assets/image/homeBanner/pngwing 1.png";
 import washingMachine from "../assets/image/homeBanner/pngegg 1.png";
 import model from "../assets/image/homeBanner/5281687 1.png";
+import rope from "../assets/image/homeBanner/cotton.png";
 const Home = () => {
   return (
     <div>
@@ -15,7 +16,7 @@ const Home = () => {
           <div className="">
             {/* left top */}
             <div
-              className="d-flex rounded-2 d-flex flex-column flex-sm-row mb-4"
+              className="d-flex rounded-2 d-flex flex-column flex-sm-row mb-5"
               style={{
                 background: "linear-gradient(to right, #62CDFF, #0080C2)",
                 height: "",
@@ -58,7 +59,7 @@ const Home = () => {
 
           {/* right */}
           <div
-            className="d-flex rounded-2 flex-column flex-sm-row "
+            className="d-flex rounded-2 flex-column flex-sm-row position-relative"
             style={{
               background: "#62CDFF",
               height: "",
@@ -76,6 +77,8 @@ const Home = () => {
                 Get Deals
               </button>
             </div>
+
+            <button className="position-absolute top-50 start-50 translate-middle rounded-4 p-2" type="button"> 95% COTTON MADE</button>
 
             {/* img */}
             <img src={model} alt="" srcset="" />
