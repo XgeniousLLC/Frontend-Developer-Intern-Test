@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Navbar } from "react-bootstrap";
 import { FiPhone } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";

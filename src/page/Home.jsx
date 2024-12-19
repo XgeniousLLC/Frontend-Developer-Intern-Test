@@ -5,7 +5,8 @@ import { MdArrowForwardIos } from "react-icons/md";
 import headPhone from "../assets/image/homeBanner/pngwing 1.png";
 import washingMachine from "../assets/image/homeBanner/pngegg 1.png";
 import model from "../assets/image/homeBanner/5281687 1.png";
-import rope from "../assets/image/homeBanner/cotton.png";
+
+// import 'bootstrap/dist/css/bootstrap.min.css';
 const Home = () => {
   return (
     <div>
@@ -78,7 +79,13 @@ const Home = () => {
               </button>
             </div>
 
-            <button className="position-absolute top-50 start-50 translate-middle rounded-4 p-2" type="button"> 95% COTTON MADE</button>
+            <button
+              className=" btn btn-light position-absolute  top-50 start-50 translate-middle rounded-4 p-2"
+              type="button"
+            >
+              {" "}
+              95% COTTON MADE
+            </button>
 
             {/* img */}
             <img src={model} alt="" srcset="" />

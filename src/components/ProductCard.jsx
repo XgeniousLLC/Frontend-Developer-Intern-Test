@@ -22,18 +22,22 @@ const ProductCard = ({ product }) => {
 
   return (
     <div>
-      <Card className="border-0 w-60 h-80 ">
-        <Card.Img className="w-60 h-56" variant="top" src={product?.image} />
-        <Card.Body className="fs-6  ">
+      <Card className="border-0 w-auto h-auto ">
+        <Card.Img
+          className="w-auto h-auto"
+          variant="top"
+          src={product?.image}
+        />
+        <Card.Body className="fs-6">
           <CardText
-            className=" rounded "
+            className="rounded d-flex justify-center items-center max-w-min px-2"
             style={{
               color: "#FFC436",
               backgroundColor: "#FFF5DF",
-              width: "70px",
+              
             }}
           >
-            <FaStar className=" mx-2 mb-1 " /> {product?.rating}
+            <FaStar className=" mr-2 " /> {product?.rating}
           </CardText>
           <Card.Title className="fs-6 fw-normal ">
             {product?.productName}
